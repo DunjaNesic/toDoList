@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Barlow', sans-serif;
+    }
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EFEFEF;
+}
+
+.main-div{
+    min-width: 25rem;
+    min-height: 35rem;
+    background: #ECECEC;
+    border-radius: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:-15px -15px 15px #fff, 10px 10px 10px #aaaaaa;
+}
+
+h1,p{
+    color: #707070;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+.date{
+    gap:0.2rem;
+    margin: 1.5rem 0rem;
+}
+
+.month{
+    text-align: center;
+}
+
+h4{
+    font-size: 1.2rem;
+    color: #707070;
+}
+
+.dayOfWeek{
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+}
+
+.blur{
+    opacity: 50%;
+}
+
+.toDoList{
+    background-color: #fff;
+    width: 17rem;
+    height: 23rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    padding: 1rem;
+}
+
+.toDoList::-webkit-scrollbar{
+    display: none;
+}
+
+.circle{
+    background-color: #CFCFCF;
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 395%);
+    z-index: 187487453;
+}
+
+.circle:hover{
+    cursor: pointer;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: #707070;
+    transform: translateY(-3px);
+    font-weight: 200;
+}
+
+.todoheading{
+    margin-bottom: 1.2rem;
+    font-weight: normal;
+    color: #707070;
+    font-size: 1.1rem;
+}
+
+textarea{
+    width: 14rem;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+}
+
+#task{
+   border: none;
+   padding: 0.5rem;
+   width: 14rem;
+   opacity: 69%;
+}
+
+li{
+    list-style: none;
+    margin: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #707070;
+}
+
+.newItem{
+    display: flex;
+    width: 14rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+
+i{
+    color: #707070;
+}
+
+.lower-part{
+    position: relative;
+}
+
+.checked {
+    color: #aaaaaa;
+    text-decoration: line-through;
+}
+
+.dunja{
+    justify-content: space-around;
+    width: 2.7rem;
+}
