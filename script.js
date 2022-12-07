@@ -74,50 +74,6 @@ list.addEventListener("click", (e) => {
   }
 });
 
-let currentDay=document.querySelector('.current');
-let dayBefore = document.querySelector('.bfr');
-let dayAfter = document.querySelector('.aftr');
-
-switch (new Date().getDay()) {
-  case 0:
-    currentDay.innerHTML="SUNDAY";
-    dayBefore.innerHTML="SATURDAY"
-    dayAfter.innerHTML="MONDAY";
-    break;
-  case 1:
-    currentDay.innerHTML = "MONDAY";
-    dayBefore.innerHTML = "SUNDAY";
-    dayAfter.innerHTML = "TUESDAY";
-    break;
-  case 2:
-    currentDay.innerHTML = "TUESDAY";
-    dayBefore.innerHTML = "MONDAY";
-    dayAfter.innerHTML = "WEDNESDAY";
-    break;
-  case 3:
-    currentDay.innerHTML = "WEDNESDAY";
-    dayBefore.innerHTML = "TUESDAY";
-    dayAfter.innerHTML = "THURSDAY";
-    break;
-  case 4:
-    currentDay.innerHTML = "THURSDAY";
-    dayBefore.innerHTML = "WEDNESDAY";
-    dayAfter.innerHTML = "FRIDAY";
-    break;
-  case 5:
-    currentDay.innerHTML = "FRIDAY";
-    dayBefore.innerHTML = "THURSDAY";
-    dayAfter.innerHTML = "SATURDAY";
-    break;
-  case 6:
-    currentDay.innerHTML = "SATURDAY";
-    dayBefore.innerHTML = "FRIDAY";
-    dayAfter.innerHTML = "SUNDAY";
-    break;
-  default:
-    currentDay.innerHTML = "DUNJA";
-}
-
 const date = new Date();
 
 const day = date.getDate();
@@ -145,3 +101,32 @@ const mth = document.querySelector('.month');
 console.log(mth);
 mth.firstElementChild.innerHTML = mesec;
 //NE MOZE mth.firstChild.innerHTML = mesec; jer kupi razmak iz HTNL-a
+
+let dayOfWeekContainer = document.querySelector(".dayOfWeek");
+
+switch (new Date().getDay()) {
+  case 0:
+    dayOfWeekContainer.scrollLeft = 0;
+    dayOfWeekContainer.classList.add("biggerMargin");
+    break;
+  case 1:
+    dayOfWeekContainer.scrollLeft = 115;
+    break;
+  case 2:
+    dayOfWeekContainer.scrollLeft = 255;
+    break;
+  case 3:
+    dayOfWeekContainer.scrollLeft = 395;
+    break;
+  case 4:
+    dayOfWeekContainer.scrollLeft = 520;
+    break;
+  case 5:
+    dayOfWeekContainer.scrollLeft = 670;
+    break;
+  case 6:
+  dayOfWeekContainer.scrollLeft = 800;
+    break;
+  default:
+    day = "Dunja";
+    }
